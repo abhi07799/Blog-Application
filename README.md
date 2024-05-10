@@ -30,4 +30,3 @@ A full-stack blogging website developed using Angular and Spring boot.
 \
 **Showing Searched Blogs**:\
 ![Getting Started](./Project-Images/Search%20Blog%202.jpg)
-\
