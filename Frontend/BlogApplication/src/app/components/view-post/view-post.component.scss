@@ -1,0 +1,29 @@
+.card-container {
+  margin: 16px;
+  // padding: 30px;
+  max-width: 60%;
+  padding-bottom: 30px;
+}
+mat-card {
+  padding: 10px;
+}
+.example-header-image {
+  background-image: url('E:/Programming/Full Stack/Blog Application/Frontend/BlogApplication/src/assets/sukuna.jpg');
+  background-size: cover;
+}
+mat-card-content {
+  margin-top: 10px;
+}
+mat-card-footer {
+  margin-left: 20px;
+}
+
+.img {
+  object-fit: cover;
+}
+.comment-card {
+  margin-top: 20px;
+}
+mat-form-field {
+  width: 100%;
+}

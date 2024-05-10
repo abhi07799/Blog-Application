@@ -1,0 +1,63 @@
+<div class="search-form">
+  <mat-form-field appearance="outline" class="search-input">
+    <mat-label>Enter Keyword to search</mat-label>
+    <input matInput [(ngModel)]="title" />
+    <button mat-button matSuffix color="primary" (click)="searchByTitle()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
+<div class="empty" *ngIf="result.length == 0">
+  <mat-icon class="icon">no_sim</mat-icon>
+  <br />
+  <span>Nothing to see here.</span>
+</div>
+<div class="card-container" *ngFor="let item of result">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ item.blogTitle }}</mat-card-title>
+      <mat-card-subtitle
+        >Posted by: {{ item.blogPostBy }} | Posted On :{{
+          item.postDate | date : "medium"
+        }}</mat-card-subtitle
+      >
+      <mat-card-subtitle>Tags: {{ item.tags }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-grid-list cols="5">
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <img
+          mat-card-image
+          src="assets/nature.jpg"
+          class="post-img"
+          alt="Card Image"
+        />
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <mat-card-content>{{
+          item.blogContent.length > 450
+            ? item.blogContent.substr(0, 450) + "..."
+            : item.blogContent
+        }}</mat-card-content>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <hr />
+    <mat-card-actions>
+      <button mat-raised-button color="primary">
+        {{ item.likes }} <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-raised-button color="primary" style="margin-left: 5px">
+        {{ item.views }} <mat-icon>remove_red_eye</mat-icon>
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        style="margin-left: 5px"
+        routerLink="/view/{{ item.id }}"
+      >
+        View Post
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

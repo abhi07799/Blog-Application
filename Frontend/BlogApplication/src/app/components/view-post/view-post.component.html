@@ -1,0 +1,35 @@
+<div *ngIf="blogData" class="card-container">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ blogData.blogTitle }}</mat-card-title>
+      <mat-card-subtitle
+        >Posted by: {{ blogData.blogPostedBy }} | Posted On :{{
+          blogData.postDate | date : "medium"
+        }}</mat-card-subtitle
+      >
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="assets/nature2.jpeg"
+      height="300px"
+      class="img"
+      alt="Card Image"
+    />
+    <mat-card-content>
+      {{ blogData.blogContent }}
+    </mat-card-content>
+    <br />
+    <mat-chip-set>
+      <mat-chip *ngFor="let tag of blogData.tags">{{ tag }}</mat-chip>
+    </mat-chip-set>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="likeBlog()">
+        {{ blogData.likes }} <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-raised-button color="primary" style="margin-left: 5px">
+        {{ blogData.views }} <mat-icon>remove_red_eye</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
