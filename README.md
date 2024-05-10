@@ -9,24 +9,30 @@ A full-stack blogging website developed using Angular and Spring boot.
 \
 \
 **Create A New Blog**:\
+
 ![Getting Started](./Project-Images/Create%20New%20Blog.jpg)
 \
 \
 **Homepage**:\
+
 ![Getting Started](./Project-Images/HomePage.jpg)
 \
 \
 **View Blog**:\
+
 ![Getting Started](./Project-Images/View%20Blog.jpg)
 \
 \
 **Like A Blog**:\
+
 ![Getting Started](./Project-Images/Blog%20Liked.jpg)
 \
 \
 **Search Blog Page**:\
+
 ![Getting Started](./Project-Images/Search%20Blog%201.jpg)
 \
 \
 **Showing Searched Blogs**:\
+
 ![Getting Started](./Project-Images/Search%20Blog%202.jpg)
